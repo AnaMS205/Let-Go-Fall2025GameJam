@@ -30,8 +30,8 @@ public class SpawnCloud : MonoBehaviour
         float spawnPosX = -125;
 
         Vector3 randomPos = new Vector3 (spawnPosX, spawnPosY, 94);
-        Quaternion desiredRotation = Quaternion.Euler(90,90,0);
+        //Quaternion desiredRotation = Quaternion.Euler(90,90,0);
 
-        Instantiate(cloud, randomPos, desiredRotation );
+        Instantiate(cloud, randomPos,  Quaternion.identity );
     }
 }

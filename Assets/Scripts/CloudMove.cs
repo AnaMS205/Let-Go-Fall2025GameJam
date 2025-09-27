@@ -18,7 +18,7 @@ public class CloudMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        speed = Random.Range(0.5f, 3f);
+        //speed = Random.Range(0.5f, 3f);
         Vector3 newPos = transform.position;
         newPos.x += speed*Time.deltaTime;
         transform.position = newPos;

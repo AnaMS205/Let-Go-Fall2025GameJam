@@ -2,13 +2,8 @@ using UnityEngine;
 
 public class StandForPlayer : MonoBehaviour
 {
-    //public Rigidbody rb;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        //rb = GetComponent<Rigidbody>();
-        
-    }
+    Vector3 startPos = new Vector3 (0,-1,0);
+    Vector3 movePos = new Vector3 (-15,-1,0);
 
     // Update is called once per frame
     void Update()
@@ -20,6 +15,10 @@ public class StandForPlayer : MonoBehaviour
     }
 
     public void Hide(){
-        Destroy(gameObject);
+        transform.position = movePos;
+    }
+
+    public void GoBack(){
+        transform.position = startPos;
     }
 }
