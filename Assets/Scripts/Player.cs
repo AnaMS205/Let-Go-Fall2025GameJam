@@ -3,7 +3,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public StandForPlayer stand;
-    public SceneManager sceneM;
+    public AudioManager audioM;
 
     public int jumpForce = 30;
     public Rigidbody rb;
@@ -25,15 +25,14 @@ public class Player : MonoBehaviour
         }
 
         if(transform.position.y <= -20){
-            //sceneM.PlayCrash();
-            //reste position
-            transform.position = startPos;
+            audioM.PlayCrash();
             
             stand.GoBack();
+            transform.position = startPos;
         }
 
         if(transform.position.y >= 10){
-            //sceneM.PlayHeaven();
+            audioM.PlayHeaven();
         }
         
     }
