@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    //public GameObject crashTrigger;
+
     public AudioSource crash;
     public AudioSource heaven;
 
@@ -18,6 +20,8 @@ public class AudioManager : MonoBehaviour
     {
         
     }
+
+
 
     public void PlayCrash(){
         int i=0;
